@@ -98,4 +98,11 @@ ggplot(df_bbb, aes(bbb)) +
   scale_y_continuous(name = "Frequency (%)", labels = percent) +
   theme_tufte()
 
+# Difference between odd and even numbers
+is.even <- function(x){ x %% 2 == 0 }
+odd_bbb <- df_bbb %>% filter(bbb %% 2 == 1)
+nrow(odd_bbb)/nrow(df_bbb) #proportion of sims where there's an odd number of people sharing birthday
+# n     #p_odd
+# 35    0.0416
+# 1000  0.4919
 
