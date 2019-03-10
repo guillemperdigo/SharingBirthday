@@ -37,7 +37,7 @@ tail(bd_sharing, 1)
 # Line plot
 ggplot(data = bd_sharing, aes(n, exp_ppl_sharing)) + 
   ggtitle("Expected number of people sharing birthday with someone else") +
-  ylab("People sharing birthday") +
+  ylab("Exp. people sharing birthday") +
   xlab("Population size") +
   geom_line() + 
   geom_rangeframe() +
