@@ -92,7 +92,7 @@ df_bbb <- as.data.frame(bbb) #df class needed for ggplot
 
 ggplot(df_bbb, aes(bbb)) +
   geom_bar(aes(y = (..count..)/sum(..count..)), fill = "#FF6666") +
-  ggtitle("Expected number of people sharing birthday with someone else", 
+  ggtitle("Number of people sharing birthday with someone else", 
           subtitle = paste0("Size of the population = ", n, "  |  Simulations = ", nsims)) +
   scale_x_discrete(name = "Number of people sharing birthday", limits = c(0:n)) + # limits fail to appear for large n
   scale_y_continuous(name = "Frequency (%)", labels = percent) +
